@@ -1,4 +1,3 @@
-/* eslint-disable */
 /**
    Zwibbler
 
@@ -9,6 +8,7 @@
 
    @license
  */
+/* eslint-disable */
 ; (function (globalModule) {
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = function (d, b) {

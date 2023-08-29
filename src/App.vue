@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 100vh; height: 100vh; display:  flex; flex-direction: row;">
+  <div style="width: 100vw; height: 100vh; display:  flex; flex-direction: row;">
     <div v-if="!!zctx" style="flex: 0 0 300px; background-color: lightgray;">
       <div>
         <b>Sidebar Elements</b>
@@ -28,11 +28,9 @@
         <option>25</option>
       </select>
     </div>
-    <div style="flex: 1 0 auto; position: relative;">
-      <zwibbler ref="zwibblerContainer" z-no-auto-init class="full flex-col">
-        <div z-canvas class="stretch"></div>
-      </zwibbler>
-    </div>
+    <zwibbler ref="zwibblerContainer" z-no-auto-init>
+      <div z-canvas></div>
+    </zwibbler>
   </div>
 </template>
 
@@ -136,5 +134,14 @@ body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+}
+
+zwibbler {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+zwibbler [z-canvas] {
+  flex: 1 1 auto;
 }
 </style>
